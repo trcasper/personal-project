@@ -1,0 +1,52 @@
+.Nav {
+  height: 9vh;
+  /* width: 100%; */
+  background: gray;
+  background-image: linear-gradient(
+    99deg,
+    rgb(56, 102, 121),
+    rgb(114, 158, 187) 40%,
+    rgb(29, 81, 102)
+  );
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2vh;
+  padding-right: 2vh;
+}
+
+.Logo {
+  height: 70px;
+  width: 70px;
+  border-radius: 97%;
+  margin-right: 50vh;
+  margin-left: 8vh
+}
+
+.NavLinks {
+  width: 25vw;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.Button {
+  height: 45px;
+  width: 80px;
+  border-radius: 10%;
+  background-image: linear-gradient(
+    99deg,
+    rgb(166, 203, 219),
+    rgb(114, 158, 187) 40%,
+    rgb(80, 144, 170)
+  );
+  color: rgb(255, 255, 255);
+  border: none;
+}
+
+.Button:hover {
+  background: rgb(199, 199, 82);
+  color: black;
+  transition: 0.3s;
+}

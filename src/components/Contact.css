@@ -1,0 +1,53 @@
+
+.Contact {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ContactBox {
+    height: 55vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.InfoBox {
+    height: 80%;
+    width: 50%;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid;
+}
+
+.InfoTitle {
+    height: 25%;
+    width: 80%;
+    font-size: 4vh;
+    font-family: "Permanent Marker", cursive;
+    
+}
+
+.BandInfo {
+    height: 40%;
+    width: 80%;
+    
+}
+
+.BandPicTwo {
+    height: 45vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.BandTwo {
+    height: 90%;
+    width: auto;
+    border: solid;
+}
