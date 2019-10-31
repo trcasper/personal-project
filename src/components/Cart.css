@@ -1,0 +1,32 @@
+.CartPage {
+    height: 120vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .UserDisplay {
+    height: 10vh;
+    width: 80%;
+  }
+  
+  .CartTitle {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 65px;
+    font-family: "Permanent Marker", cursive;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline; color: white;
+  }
+  
+  .CartBox {
+      height: 75%;
+      width: 80%;
+      border: solid;
+  }
+  

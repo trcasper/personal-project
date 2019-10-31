@@ -1,12 +1,60 @@
 .Merch {
-  height: 100%;
+  height: 120vh;
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .MerchTitle {
-  height: 15vh;
+  height: 10vh;
   width: 100%;
-  background-color: gray;
+  display: flex;
+  justify-content: center;
+  font-size: 65px;
+  font-family: "Permanent Marker", cursive;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline; color: white;
 }
+
+.ProductContainer {
+    height: 75%;
+    width: 80%;
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.ProductBox {
+  height: 20vh;
+  width: 80%;
+  background-image: linear-gradient(99deg, rgb(28, 85, 107), rgb(72, 108, 131) 40%, rgb(29, 81, 102));
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
+    0 10px 10px 0 rgba(0, 0, 0, 0.26);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ProductPic {
+  height: 18vh;
+  width: 18vh;
+  border: solid;
+}
+
+.DescriptionBox {
+  height: 18vh;
+  width: 50vh;
+  border: solid;
+}
+
+
+
+
+

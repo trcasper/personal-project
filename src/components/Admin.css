@@ -1,0 +1,70 @@
+.Admin {
+    height: 120vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .AdminTitle {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 65px;
+    font-family: "Permanent Marker", cursive;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline; color: white;
+  }
+  
+  .AdminContainer {
+      height: 75%;
+      width: 80%;
+      border: solid;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+  }
+
+  .InputContainer {
+      height: 70vh;
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+      align-items: center;
+      background-image: linear-gradient(99deg, rgb(28, 85, 107), rgb(72, 108, 131) 40%, rgb(29, 81, 102));
+      color: rgb(255, 255, 255);
+      border-radius: 8px;
+      box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
+        0 10px 10px 0 rgba(0, 0, 0, 0.26);
+  }
+
+  .ImagePreview {
+    height: 20vh;
+    width: 20vh;
+    border: solid;
+  }
+
+  .InputBoxOne {
+    height: 45vh;
+    width: 45vh;
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .InputBoxes {
+      height: 40vh;
+      width: 40vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+  }

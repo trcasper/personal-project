@@ -7,6 +7,7 @@ import Cart from './components/Cart';
 import Contact from './components/Contact';
 import Confirm from './components/Confirm';
 import Login from './components/Login';
+import Admin from './components/Admin';
 
 
 export default (
@@ -17,6 +18,7 @@ export default (
         <Route path = '/contact' component={Contact} />
         <Route path = '/confirm' component={Confirm} />
         <Route path = '/login' component={Login} />
+        <Route path = '/admin' component={Admin} />
 
 
     </Switch>

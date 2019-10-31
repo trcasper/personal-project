@@ -275,3 +275,8 @@
   justify-content: center;
   text-decoration: underline; color: white;
 }
+
+
+.AdminButton {
+  width: 8vh;
+}
