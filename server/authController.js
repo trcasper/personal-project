@@ -20,27 +20,48 @@ module.exports = {
 
     login: async (req, res) => {
         const {username, password} = req.body;
-        console.log(req.body)
-        const foundUser = await req.app.get('db').get_user([username]);
-        const user = foundUser[0]
-        console.log(user)
-        if(!user) {
-            return res.status(401).send("Username not found, Please register as a new user")
+        console.log("server", username, password)
+        const db = req.app.get('db')
+
+        let foundUser = await db.get_user(username);
+        foundUser = foundUser[0]
+        if(!foundUser) {
+           res.status(401).send("Username not found")
         }
-        const isAuthenticated = bcrypt.compareSync(password, user.password);
+        console.log(foundUser)
+        const isAuthenticated = bcrypt.compareSync(password, foundUser.password);
         
-        if(!isAuthenticated) {
-            return res.status(403).send("Incorrect Password");
+        if(isAuthenticated) {
+            req.session.user = foundUser;
+            res.status(200).send(req.session.user);
+        } else {
+            res.status(401).send('Incorrect Password')
         }
-        return res.status(200).send(user)
-        
-        
     },
 
     logout: (req, res) => {
         req.session.destroy()
         res.sendStatus(200);
 
-    }
+    },
+
+    // getUser: (req, res) => {
+    //     if(req.session.user) {
+    //         res.status(200).send(req.session.user)
+    //         //finds if there are any available sessions
+    //     }
+    //     res.sendStatus(200)
+    //     //still sends a status that it worked even if there weren't any available sessions
+    // },
+
+    // guest_register: async (req, res) => {
+    //     if(!req.session.user) {
+    //         let guestUser = await db.guest_register(guest)
+    //         guestUser[0];
+    //         res.status(200).send("Guest")
+
+        
+    //     }
+    // }
     
 }

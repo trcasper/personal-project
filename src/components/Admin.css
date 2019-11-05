@@ -1,5 +1,5 @@
 .Admin {
-    height: 120vh;
+    height: 200vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -30,11 +30,12 @@
   }
 
   .InputContainer {
-      height: 70vh;
+      height: 90%;
       width: 60%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-around;
+      /* justify-content: center; */
       padding: 20px;
       box-sizing: border-box;
       align-items: center;
@@ -43,16 +44,11 @@
       border-radius: 8px;
       box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
         0 10px 10px 0 rgba(0, 0, 0, 0.26);
-  }
-
-  .ImagePreview {
-    height: 20vh;
-    width: 20vh;
-    border: solid;
+      
   }
 
   .InputBoxOne {
-    height: 45vh;
+    height: 95%;
     width: 45vh;
     border: solid;
     display: flex;
@@ -61,10 +57,65 @@
     
   }
 
+  .InputTitleProduct {
+    display: flex;
+    font-family: "Permanent Marker", cursive;
+    justify-content: center;
+  }
+
   .InputBoxes {
-      height: 40vh;
-      width: 40vh;
+      height: 95%;
+      width: 80%;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
   }
+
+  .InputBoxTwo {
+    height: 95%;
+    width: 45vh;
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+  .RegisterBoxes {
+    height: 95%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+
+.InputTitleRegister {
+  display: flex;
+  font-family: "Permanent Marker", cursive;
+  justify-content: center;
+
+  
+}
+
+.MerchBox {
+  height: 300%;
+  width: 45vh;
+  border: solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.InputMerchTitle {
+  display: flex;
+  font-family: "Permanent Marker", cursive;
+  justify-content: center;
+}
+
+.AdminMerch {
+  height: 80%;
+  width: 95%;
+}

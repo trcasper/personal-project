@@ -1,37 +1,42 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { getProduct } from "../redux/prodReducer";
+import Product from "../components/Product";
 import "./Merch.css";
 
 class Merch extends Component {
+  componentDidMount() {
+    this.props.getProduct();
+  }
+
   render() {
+    console.log(this.props.product);
+
     return (
       <div className="Merch">
-        <div className="MerchTitle">Merch </div>
+        <div className="MerchTitle">Merch</div>
         <div className="ProductContainer">
-          <div className="ProductBox">
-            <div className="ProductPic"></div>
-            <div className="DescriptionBox"></div>
-          </div>
-          <div className="ProductBox">
-            <div className="ProductPic"></div>
-            <div className="DescriptionBox"></div>
-          </div>
-
-          <div className="ProductBox">
-            <div className="ProductPic"></div>
-            <div className="DescriptionBox"></div>
-          </div>
-          <div className="ProductBox">
-            <div className="ProductPic"></div>
-            <div className="DescriptionBox"></div>
-          </div>
+          {this.props.product.map((element, index) => {
+            return <Product product={element} key={`product: ${index}`} />;
+          })}
         </div>
-        <button className="CheckoutButton">
-          <Link to="/login">Checkout</Link>
-        </button>
       </div>
     );
   }
 }
 
-export default Merch;
+const mapStateToProps = reduxState => {
+  const { product } = reduxState.prodReducer;
+  return {
+    product
+  };
+};
+
+const mapDispatchToProps = {
+  getProduct
+};
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Merch);

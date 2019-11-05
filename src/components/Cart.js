@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import "./Cart.css";
 import {connect} from 'react-redux';
-import {updateUser} from '../redux/reducer';
+import {updateUser} from '../redux/userReducer';
 import axios from 'axios'
 
 const Cart = props => {
@@ -13,7 +13,7 @@ const Cart = props => {
             })
             .catch(err => console.log(err));
     }
-    console.log(props)
+    // console.log(props)
 
 
 
@@ -34,7 +34,7 @@ const Cart = props => {
 }
 
 const mapStateToProps = reduxState => {
-    const {user} = reduxState.reducer;
+    const {user} = reduxState.userReducer;
     return {
         user
     }

@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import axios from "axios";
+// import axios from "axios";
 import "./Login.css";
-import {updateUser} from '../redux/reducer';
-import {connect} from 'react-redux';
+import { updateUser } from "../redux/userReducer";
+import { connect } from "react-redux";
+import { Redirect, Link } from "react-router-dom";
 
 class Login extends Component {
   constructor() {
@@ -13,39 +14,39 @@ class Login extends Component {
     };
   }
 
-  handleInput = (e) => {
+  handleInput = e => {
     this.setState({
       [e.target.name]: e.target.value
     });
   };
 
-  handleRegister = () => {
-      axios.post('/auth/register', {
-          username: this.state.username,
-          password: this.state.password
-      }).then(res => {
-          this.props.updateUser(res.data);
-          this.props.history.push('/cart');
-          this.setState({
-              username: "",
-              password: ""
-          })
-      })
-  };
+  // handleRegister = () => {
+  //   axios
+  //     .post("/auth/register", {
+  //       username: this.state.username,
+  //       password: this.state.password
+  //     })
+  //     .then(res => {
+  //       this.props.updateUser(res.data);
+  //       this.props.history.push("/admin");
+  //       this.setState({
+  //         username: "",
+  //         password: ""
+  //       });
+  //     });
+  // };
 
   handleLogin = () => {
-      const {username, password} = this.state
-      this.props.updateUser(username, password);
-      this.props.history.push("/cart");
-      this.setState({
-        username: "",
-        password: ""
-      });
     
+    const {username, password} = this.state
+    this.props
+      .updateUser(username, password)
   };
 
 
   render() {
+    if (this.props.redux.userReducer.loggedIn) return <Redirect to="/admin" />;
+    console.log(this.props);
     return (
       <div className="Login">
         <div className="LoginBox">
@@ -64,7 +65,7 @@ class Login extends Component {
               placeholder="Enter password"
             />
             <button onClick={this.handleLogin}>Login</button>
-            <button onClick={this.handleRegister}>Register</button>
+            {/* <button onClick={this.handleRegister}>Register</button> */}
           </div>
         </div>
       </div>
@@ -73,17 +74,18 @@ class Login extends Component {
 }
 
 const mapStateToProps = reduxState => {
-    const { user } = reduxState;
-    return {
-      user
-    };
+  const { user } = reduxState;
+  return {
+    user,
+    redux: reduxState
   };
-  
-  const mapDispatchToProps = {
-    updateUser
-  };
+};
+
+const mapDispatchToProps = {
+  updateUser
+};
 
 export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(Login);
+  mapStateToProps,
+  mapDispatchToProps
+)(Login);

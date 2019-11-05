@@ -68,7 +68,7 @@ function Landing() {
           </div>
         </div>
       </div>
-      <Link to="/admin"><button>Admin</button></Link>
+      <Link to="/login"><button>Login</button></Link>
       <Link to="/merch">
         <div className="BoxThree">
           <div className="MerchTitle">Merch</div>
