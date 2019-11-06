@@ -23,17 +23,29 @@ module.exports = {
     },
 
     editProduct: async (req, res) => {
-        let {product_id} = req.params;
-        let {new_product_url, new_product_name, new_product_description, new_product_price} = req.body;
-        const db = req.app.put('db');
-        let productInfo = await db.edit_product_info([
-            +product_id,
-            new_product_url,
-            new_product_name,
-            new_product_description,
-            new_product_price
-        ]);
-        res.send(productInfo);
-
+        console.log(req.body)
+        let db = req.app.get('db');
+        const {product_id, product_url, product_name, product_description, product_price} = req.body
+        db.edit_product([product_id, product_url, product_name, product_description, product_price])
+        .then(response => {
+            res.send(response).status(200);
+        }).catch(err => {
+            res.send(err).status(500);
+        })
     }
+
+    // editProduct: async (req, res) => {
+    //     let {product_id} = req.params;
+    //     let {new_product_url, new_product_name, new_product_description, new_product_price} = req.body;
+    //     const db = req.app.put('db');
+    //     let productInfo = await db.edit_product_info([
+    //         +product_id,
+    //         new_product_url,
+    //         new_product_name,
+    //         new_product_description,
+    //         new_product_price
+    //     ]);
+    //     res.send(productInfo);
+ 
+    // }
 }

@@ -14,8 +14,44 @@ class Admin extends Component {
       product_description: "",
       product_price: "",
       username: "",
-      password: ""
+      password: "",
+      edit: false,
+      product_id: ""
     };
+  }
+
+  saveEdit = () => {
+    console.log(this.state)
+    Axios.put('/api/editProduct', {
+      product_url: this.state.product_url,
+      product_name: this.state.product_name,
+      product_description: this.state.product_description,
+      product_price: this.state.product_price,
+      product_id: this.state.product_id
+      
+    }) 
+    .then(res => {
+      alert("Product Updated");
+      this.setState({
+        product_url: "",
+        product_name: "",
+        product_description: "",
+        product_price: ""
+      })
+    })
+  }
+
+
+  handleEdit = (product) => {
+    let {product_url, product_name, product_description, product_price, product_id} = product;
+    this.setState({
+      product_url: product_url,
+      product_name: product_name,
+      product_description: product_description,
+      product_price: product_price,
+      product_id: product_id,
+      edit: true
+    })
   }
 
   handleAdd = () => {
@@ -118,6 +154,7 @@ class Admin extends Component {
               <div className="InputButtons">
                 <button onClick={this.handleAdd}>Add</button>
                 <button onClick={this.handleCancel}>Cancel</button>
+                <button onClick={this.saveEdit}>Save</button>
               </div>
             </div>
             <div className="InputBoxTwo">
@@ -138,12 +175,12 @@ class Admin extends Component {
                 <button onClick={this.handleRegister}>Register</button>
               </div>
             </div>
-            <div className="MerchBox">
+            <div className="MerchBoxOne">
               <div className="InputMerchTitle">Merch </div>
               <div className="AdminMerch">
                 {this.props.product.map((element, index) => {
                   return (
-                    <Product product={element} key={`product: ${index}`} />
+                    <Product product={element} key={`product: ${index}`} handleEdit = {this.handleEdit}/>
                   );
                 })}
               </div>
@@ -169,3 +206,5 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Admin);
+
+//add handle edit in product

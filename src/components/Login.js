@@ -41,6 +41,7 @@ class Login extends Component {
     const {username, password} = this.state
     this.props
       .updateUser(username, password)
+      this.props.history.push("/admin")
   };
 
 

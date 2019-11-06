@@ -4,4 +4,9 @@
 
   background-image: linear-gradient(99deg, rgb(65, 148, 180), rgb(162, 197, 221) 40%, rgb(29, 81, 102));
   color: rgb(255, 255, 255);
+  text-decoration: none; color: white;
+}
+
+a {
+  text-decoration: none; color: white;
 }

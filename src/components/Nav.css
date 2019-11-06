@@ -20,15 +20,14 @@
   height: 70px;
   width: 70px;
   border-radius: 97%;
-  margin-right: 50vh;
-  margin-left: 8vh
+  /* margin-right: 50%; */
+  /* margin-left: 8vh */
 }
 
 .NavLinks {
   width: 25vw;
   display: flex;
   justify-content: space-between;
-  
 }
 
 .Button {
@@ -43,10 +42,86 @@
   );
   color: rgb(255, 255, 255);
   border: none;
+  text-decoration: none; color: white;
 }
+
 
 .Button:hover {
   background: rgb(199, 199, 82);
   color: black;
   transition: 0.3s;
+}
+
+@media (min-width: 800px) {
+  #hamburger-icon,
+  .dropdown {
+    display: none;
+  }
+  .Home {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 801px) {
+  .NavLinks,
+  .Cart {
+    display: none;
+  }
+}
+
+.dropdown {
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 75px;
+  right: 0;
+  background: gray;
+  background-image: linear-gradient(
+    99deg,
+    rgb(31, 69, 85),
+    rgb(66, 98, 119) 40%,
+    rgb(11, 46, 59)
+  );
+  width: 35%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* align-content: flex-start; */
+  /* align-items: center; */
+  border-bottom-left-radius: 6px;
+  padding-left: 5%;
+  font-family: "Permanent Marker", cursive;
+}
+
+.hide-animation {
+  animation-name: hide;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.show-animation {
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hide {
+  0% {
+    height: 100px;
+  }
+  100% {
+    height: 0px;
+  }
+}
+
+@keyframes show {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 200px;
+  }
 }

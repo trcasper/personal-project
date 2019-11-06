@@ -38,7 +38,7 @@ app.post('/auth/logout', authCtrl.logout)
 // product endpoints
 app.get('/api/getProducts', prodCtrl.getProducts)
 app.post('/api/addProduct', prodCtrl.addProduct)
-app.put('/api/editProduct/:product_id', prodCtrl.editProduct)
+app.put('/api/editProduct', prodCtrl.editProduct)
 
 
 app.listen(SERVER_PORT, () => {
