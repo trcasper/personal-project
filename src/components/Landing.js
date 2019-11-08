@@ -2,11 +2,11 @@ import React from "react";
 import "./Landing.css";
 import { Link } from "react-router-dom";
 import Band from "../img/Band.jpg";
-import Fb from "../img/Fb.png";
-import Insta from "../img/Insta.jpg";
-import Youtube from "../img/Youtube.jpg";
-import Spotify from "../img/Spotify.jpg";
-import Apple from "../img/Apple.jpg";
+// import Fb from "../img/Fb.png";
+// import Insta from "../img/Insta.jpg";
+// import Youtube from "../img/Youtube.jpg";
+// import Spotify from "../img/Spotify.jpg";
+// import Apple from "../img/Apple.jpg";
 import Logo from "../img/Logo.jpg";
 import Shirt from "../img/Shirt.jpg";
 import Pizza from "../img/Pizza.jpg";
@@ -21,7 +21,7 @@ function Landing() {
         <div className="PicBox">
           <img className="BandPic" src={Band} alt="FullBandPic" />
         </div>
-        <div className="LinksOne">
+        {/* <div className="LinksOne">
           <div className="FbBox">
             <a
               href="https://www.facebook.com/alpineloopband/?ref=aymt_homepage_panel&eid=ARChc-ypd4xzxV1rCaOEq0_hwxZPqay_sr9IUfxAxmUupU40Yd-ZTmtsdlcj7EXg0RVUc4Y3u1p_PYEv"
@@ -35,13 +35,13 @@ function Landing() {
               <img className="Insta" src={Insta} alt="InstagramPic" />
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="BoxTwo">
         <div className="VidBox">
           <ReactPlayer url="https://youtu.be/A4LXZJ54OnE" />
         </div>
-        <div className="LinksTwo">
+        {/* <div className="LinksTwo">
           <div className="YoutubeBox">
             <a
               href="https://www.youtube.com/channel/UCu4Mun5I787cuQSGTzA9D0A"
@@ -66,9 +66,9 @@ function Landing() {
               <img className="Apple" src={Apple} alt="ApplePic" />
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
-      <Link to="/login"><button>Login</button></Link>
+      
       <Link to="/merch">
         <div className="BoxThree">
           <div className="MerchTitle">Merch</div>
@@ -91,9 +91,12 @@ function Landing() {
             <div className="PosterLabel">Posters!</div>
             <div className="ShirtLabel">Shirts!</div>
             <div className="PizzaLabel">Pizzas!</div>
+            
           </div>
+          <div className="ClickHere">Click Here!</div>
         </div>
       </Link>
+      <Link to="/login"><button className="AdminButton">Admin</button></Link>
 
     </div>
   );

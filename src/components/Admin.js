@@ -43,6 +43,7 @@ class Admin extends Component {
 
 
   handleEdit = (product) => {
+    console.log(this.state)
     let {product_url, product_name, product_description, product_price, product_id} = product;
     this.setState({
       product_url: product_url,
@@ -77,6 +78,15 @@ class Admin extends Component {
     console.log(this.state);
   };
 
+  handleDelete = id => {
+    Axios.delete(`/api/cart/${id}`).then(res => {
+      console.log(res)
+      this.setState({
+        product: res.data
+      })
+    })
+  }
+
   handleCancel = () => {
     this.setState({
       product_url: "",
@@ -85,6 +95,8 @@ class Admin extends Component {
       product_price: ""
     });
   };
+
+
 
   handleInput = e => {
     this.setState({
@@ -152,9 +164,10 @@ class Admin extends Component {
                 />
               </div>
               <div className="InputButtons">
-                <button onClick={this.handleAdd}>Add</button>
-                <button onClick={this.handleCancel}>Cancel</button>
+                <button onClick={this.handleAdd}>Add New</button>
+                <button onClick={this.handleCancel}>Clear</button>
                 <button onClick={this.saveEdit}>Save</button>
+                <button onClick={this.handleDelete}>Delete Product</button>
               </div>
             </div>
             <div className="InputBoxTwo">

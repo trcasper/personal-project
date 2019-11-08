@@ -23,6 +23,7 @@
     flex-direction: column;
     align-items: center;
     border: solid;
+    
 }
 
 .InfoTitle {
@@ -39,6 +40,11 @@
     
 }
 
+.ContactInfo {
+    height: 40%;
+    width: 80%;
+}
+
 .BandPicTwo {
     height: 45vh;
     width: 100%;
@@ -50,4 +56,11 @@
     height: 90%;
     width: auto;
     border: solid;
+}
+
+@media(max-width: 800px) {
+    .InfoBox {
+        width: 80%;
+        
+    }
 }

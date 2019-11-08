@@ -62,7 +62,7 @@
   }
 }
 
-@media (max-width: 801px) {
+@media (max-width: 800px) {
   .NavLinks,
   .Cart {
     display: none;

@@ -1,0 +1,43 @@
+
+.BottomNav {
+    height: 7vh;
+    width: 100%;
+    background: gray;
+    background-image: linear-gradient(
+      99deg,
+      rgb(56, 102, 121),
+      rgb(114, 158, 187) 40%,
+      rgb(29, 81, 102)
+    );
+    margin: 0;
+    z-index: 33;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display:flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;    
+}
+
+.PicLinks {
+    /* background-color: gray; */
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .PicLinkBox {
+    height: 80%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .Picss {
+    height: 80%;
+    width: auto;
+  }
+  

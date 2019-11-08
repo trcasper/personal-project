@@ -31,14 +31,19 @@ app.post('/auth/register', authCtrl.register)
 app.post('/auth/login', authCtrl.login)
 app.post('/auth/logout', authCtrl.logout)
 
-// guest endpoints
-// app.get('/auth/getUser', authCtrl.getUser)
-// app.post('/auth/guest_register', authCtrl.guest_register)
 
 // product endpoints
 app.get('/api/getProducts', prodCtrl.getProducts)
+// app.get('/api/getProductById/', prodCtrl.getProductById)
 app.post('/api/addProduct', prodCtrl.addProduct)
 app.put('/api/editProduct', prodCtrl.editProduct)
+app.put('/api/cart/:id', prodCtrl.addToCart)
+app.delete('/api/cart/:id', prodCtrl.deleteProduct)
+// app.delete('/api/Cart/:id', prodCtrl.deleteFromCart)
+
+
+
+
 
 
 app.listen(SERVER_PORT, () => {

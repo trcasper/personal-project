@@ -63,6 +63,12 @@
 }
 
 
+@media (max-width: 800px) {
+  .ProductContainer {
+    width: 80%;
+  }
+}
+
 
 
 

@@ -18,8 +18,10 @@ class Merch extends Component {
         <div className="MerchTitle">Merch</div>
         <div className="ProductContainer">
           {this.props.product.map((element, index) => {
-            return <Product product={element} key={`product: ${index}`} />;
+            return <Product product={element} key={`product: ${index}`} showButton={false} />;
+            
           })}
+          
         </div>
       </div>
     );
