@@ -16,35 +16,39 @@ class Admin extends Component {
       username: "",
       password: "",
       edit: false,
-      product_id: ""
+      product_id: "",
+      products: this.props.product
     };
   }
 
   saveEdit = () => {
-    console.log(this.state)
-    Axios.put('/api/editProduct', {
+    console.log(this.state);
+    Axios.put("/api/editProduct", {
       product_url: this.state.product_url,
       product_name: this.state.product_name,
       product_description: this.state.product_description,
       product_price: this.state.product_price,
       product_id: this.state.product_id
-      
-    }) 
-    .then(res => {
+    }).then(res => {
       alert("Product Updated");
       this.setState({
         product_url: "",
         product_name: "",
         product_description: "",
         product_price: ""
-      })
-    })
-  }
+      });
+    });
+  };
 
-
-  handleEdit = (product) => {
-    console.log(this.state)
-    let {product_url, product_name, product_description, product_price, product_id} = product;
+  handleEdit = product => {
+    console.log(this.state);
+    let {
+      product_url,
+      product_name,
+      product_description,
+      product_price,
+      product_id
+    } = product;
     this.setState({
       product_url: product_url,
       product_name: product_name,
@@ -52,8 +56,8 @@ class Admin extends Component {
       product_price: product_price,
       product_id: product_id,
       edit: true
-    })
-  }
+    });
+  };
 
   handleAdd = () => {
     Axios.post("/api/addProduct", {
@@ -63,7 +67,7 @@ class Admin extends Component {
       product_price: this.state.product_price
     })
       .then(res => {
-        alert("Product Added");
+        alert("Product Added: Please Refresh");
         this.setState({
           product_url: "",
           product_name: "",
@@ -79,13 +83,15 @@ class Admin extends Component {
   };
 
   handleDelete = id => {
+    alert("Product Deleted: Please Refresh");
+    console.log(id);
     Axios.delete(`/api/cart/${id}`).then(res => {
-      console.log(res)
+      console.log(res);
       this.setState({
-        product: res.data
-      })
-    })
-  }
+        products: []
+      });
+    });
+  };
 
   handleCancel = () => {
     this.setState({
@@ -95,8 +101,6 @@ class Admin extends Component {
       product_price: ""
     });
   };
-
-
 
   handleInput = e => {
     this.setState({
@@ -120,7 +124,14 @@ class Admin extends Component {
     this.props.getProduct();
   }
 
+  // componentDidUpdate(prevProps) {
+  //   if (this.props.product !== this.state.products ) {
+  //     this.render()
+  //   }
+  // }
+
   render() {
+    console.log(this.state.products);
     return (
       <div className="Admin">
         <div className="AdminTitle">Admin</div>
@@ -167,7 +178,11 @@ class Admin extends Component {
                 <button onClick={this.handleAdd}>Add New</button>
                 <button onClick={this.handleCancel}>Clear</button>
                 <button onClick={this.saveEdit}>Save</button>
-                <button onClick={this.handleDelete}>Delete Product</button>
+                <button
+                  onClick={() => this.handleDelete(this.state.product_id)}
+                >
+                  Delete Product
+                </button>
               </div>
             </div>
             <div className="InputBoxTwo">
@@ -193,7 +208,11 @@ class Admin extends Component {
               <div className="AdminMerch">
                 {this.props.product.map((element, index) => {
                   return (
-                    <Product product={element} key={`product: ${index}`} handleEdit = {this.handleEdit}/>
+                    <Product
+                      product={element}
+                      key={`product: ${index}`}
+                      handleEdit={this.handleEdit}
+                    />
                   );
                 })}
               </div>

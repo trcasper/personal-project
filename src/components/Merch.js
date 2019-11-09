@@ -23,6 +23,9 @@ class Merch extends Component {
           })}
           
         </div>
+        <button className="Continue">
+            <Link to="/cart">Continue To Cart</Link>
+          </button>
       </div>
     );
   }

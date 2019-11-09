@@ -19,6 +19,8 @@ export function getProductById(id) {
   // alert("Added To Cart");
   console.log(id)
   let cart = axios.put(`/api/cart/${id}`).then(res => {
+    alert("Added to Cart")
+
     return res.data;
   });
   console.log(cart)

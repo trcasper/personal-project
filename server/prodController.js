@@ -66,13 +66,14 @@ module.exports = {
     console.log(correctProduct);
     req.session.cart = correctProduct[0];
     res.status(200).send(req.session.cart);
+
   },
 
   deleteProduct: (req, res) => {
     const db = req.app.get('db');
     const { id } = req.params;
-
-    db.delete_product([+id])
+    console.log("product deleted", id)
+    db.delete_product(id)
     .then(() => res.sendStatus(200))
         
 },

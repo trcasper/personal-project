@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import "./Cart.css";
 import { connect } from "react-redux";
-import { updateUser } from "../redux/userReducer";
+// import { updateUser } from "../redux/userReducer";
 import {getProductById} from '../redux/prodReducer';
 import Product from '../components/Product';
-import axios from "axios";
+import {Link} from 'react-router-dom';
+
 
 class Cart extends Component {
   componentDidMount() {
     this.props.getProductById();
-  }
+  
 //   const handleLogout = () => {
 //       axios
 //           .post('/auth/logout')
@@ -20,23 +21,34 @@ class Cart extends Component {
 //   }
 //   console.log(props)
 
+          /* <h3>{this.props.user.username}</h3> */
+          /* <button onClick={handleLogout}>LogOut</button> */
+  }
+
+
+
+
   render() {
+
     return (
       <div className="CartPage">
-        <div className="UserDisplay">
-          {/* <h3>{this.props.user.username}</h3> */}
-          {/* <button onClick={handleLogout}>LogOut</button> */}
-        </div>
         <div className="CartTitle">Cart</div>
         <div className="CartBox">
+
         {this.props.product.map((element, index) => {
             return <Product product={element} key={`product: ${index}`}  />;
             
           })}
+          <button className="CheckoutButton">
+          <Link to="/checkout">Checkout</Link>
+            </button>
         </div>
+        <button className="LogoutButton">Logout</button>
       </div>
     );
-  }
+    
+
+  } 
 }
 
 const mapStateToProps = reduxState => {

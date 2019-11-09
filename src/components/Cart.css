@@ -6,11 +6,6 @@
     align-items: center;
   }
 
-  .UserDisplay {
-    height: 10vh;
-    width: 80%;
-  }
-  
   .CartTitle {
     height: 10vh;
     width: 100%;
@@ -27,6 +22,56 @@
   .CartBox {
       height: 75%;
       width: 80%;
-      border: solid;
+      background-image: linear-gradient(99deg, rgb(28, 85, 107), rgb(72, 108, 131) 40%, rgb(29, 81, 102));
+      color: rgb(255, 255, 255);
+      border-radius: 8px;
+      box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
+        0 10px 10px 0 rgba(0, 0, 0, 0.26);
+      padding-top: 5vh;
+  }
+
+  .LogoutButton {
+    height: 45px;
+    width: 120px;
+    border-radius: 10%;
+    background-image: linear-gradient(
+      99deg,
+      rgb(158, 30, 26),
+      rgb(161, 78, 76) 40%,
+      rgb(129, 61, 61)
+    );
+    color: rgb(255, 255, 255);
+    border: none;
+    text-decoration: none; color: white;
+  }
+
+  .LogoutButton:hover {
+    background: rgb(199, 199, 82);
+    color: black;
+    transition: 0.3s;
+  }
+
+  .CheckoutButton {
+    height: 45px;
+    width: 200px;
+    
+    border-radius: 10%;
+    background-image: linear-gradient(
+      99deg,
+      rgb(26, 158, 114),
+      rgb(62, 190, 173) 40%,
+      rgb(13, 105, 75)
+    );
+    color: rgb(255, 255, 255);
+    border: none;
+    text-decoration: none; color: white;
+    margin-top: 5vh;
+    margin-left: 5vh;
+  }
+
+  .CheckoutButton:hover {
+    background: rgb(199, 199, 82);
+    color: black;
+    transition: 0.3s;
   }
   

@@ -41,7 +41,7 @@ class Product extends Component {
             {/* <p>{this.props.product.user_id}</p> */}
               
           </div>
-          {this.state.showButton ? <button onClick={() => this.props.getProductById(this.props.product.product_id)}className="AddToCartButton">Add</button> : <div></div>}
+          {this.state.showButton ? <button onClick={() => this.props.getProductById(this.props.product.product_id)}className="Button">Add</button> : <div></div>}
           {/* //props.product.product_id */}
 
       </div>
