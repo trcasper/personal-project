@@ -24,7 +24,8 @@ module.exports = {
       product_url,
       product_name,
       product_description,
-      product_price
+      product_price,
+      req.session.user.user_id
     ])
       .then(response => {
         res.send(response).status(200);
@@ -77,6 +78,16 @@ module.exports = {
     .then(() => res.sendStatus(200))
         
 },
+
+//   DeleteFromCart: (req, res) => {
+//   res.send(req.session.cart.splice(index, 1))
+//   res.status(200).send
+// }
+
+  // addUserToProduct: (req, res) => {
+  //   const db = req.app.get('db');
+  //   const {product_id}
+  // }
 
   // deleteFromCart(req, res) {
   //   const { id } = req.params;

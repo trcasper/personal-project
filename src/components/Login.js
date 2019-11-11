@@ -4,6 +4,7 @@ import "./Login.css";
 import { updateUser } from "../redux/userReducer";
 import { connect } from "react-redux";
 import { Redirect, Link } from "react-router-dom";
+import Axios from "axios";
 
 class Login extends Component {
   constructor() {
@@ -20,29 +21,30 @@ class Login extends Component {
     });
   };
 
-  // handleRegister = () => {
-  //   axios
-  //     .post("/auth/register", {
-  //       username: this.state.username,
-  //       password: this.state.password
-  //     })
-  //     .then(res => {
-  //       this.props.updateUser(res.data);
-  //       this.props.history.push("/admin");
-  //       this.setState({
-  //         username: "",
-  //         password: ""
-  //       });
-  //     });
-  // };
-
   handleLogin = () => {
+    const {username, password} = this.state;
+    Axios
+    .post('/auth/login', {username, password})
+    .then(res => {
+      this.props.history.push('/admin')
+    })
+    .catch(err => {
+      alert('Incorrect Username / Password')
+    });
+
+    this.setState({
+      username: "",
+      password: ""
+    })
+  }
+
+  // handleLogin = () => {
     
-    const {username, password} = this.state
-    this.props
-      .updateUser(username, password)
-      this.props.history.push("/admin")
-  };
+  //   const {username, password} = this.state
+  //   this.props
+  //     .updateUser(username, password)
+  //     this.props.history.push("/admin")
+  // };
 
 
   render() {
@@ -90,3 +92,21 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Login);
+
+
+
+  // handleRegister = () => {
+  //   axios
+  //     .post("/auth/register", {
+  //       username: this.state.username,
+  //       password: this.state.password
+  //     })
+  //     .then(res => {
+  //       this.props.updateUser(res.data);
+  //       this.props.history.push("/admin");
+  //       this.setState({
+  //         username: "",
+  //         password: ""
+  //       });
+  //     });
+  // };

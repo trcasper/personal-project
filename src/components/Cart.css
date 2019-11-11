@@ -74,4 +74,12 @@
     color: black;
     transition: 0.3s;
   }
+
+  .Total {
+    height: 5vh;
+    /* background: gray; */
+    padding-left: 5vh;
+    font-size: 25px;
+    font-family: "Permanent Marker", cursive;
+  }
   

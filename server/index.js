@@ -40,6 +40,7 @@ app.put('/api/editProduct', prodCtrl.editProduct)
 app.put('/api/cart/:id', prodCtrl.addToCart)
 app.delete('/api/cart/:id', prodCtrl.deleteProduct)
 // app.delete('/api/Cart/:id', prodCtrl.deleteFromCart)
+// app.get('/api/cart', prodCtrl.getCart)
 
 
 

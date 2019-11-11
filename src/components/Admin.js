@@ -83,9 +83,9 @@ class Admin extends Component {
   };
 
   handleDelete = id => {
-    alert("Product Deleted: Please Refresh");
     console.log(id);
     Axios.delete(`/api/cart/${id}`).then(res => {
+      alert("Product Deleted: Please Refresh");
       console.log(res);
       this.setState({
         products: []
@@ -120,15 +120,26 @@ class Admin extends Component {
     });
   };
 
+  handleLogout = () => {
+    Axios
+      .post('/auth/logout')
+      .then(res => {
+        this.props.history.push("/")
+        alert("Logged Out")
+      })
+      .catch(err => console.log(err))
+
+  }
+
   componentDidMount() {
     this.props.getProduct();
   }
 
-  // componentDidUpdate(prevProps) {
-  //   if (this.props.product !== this.state.products ) {
-  //     this.render()
-  //   }
-  // }
+   componentDidUpdate(prevProps) {
+     if (this.props.product !== this.state.products ) {
+   this.render()
+     }
+   }
 
   render() {
     console.log(this.state.products);
@@ -185,6 +196,21 @@ class Admin extends Component {
                 </button>
               </div>
             </div>
+
+            <div className="MerchBoxOne">
+              <div className="InputMerchTitle">Merch </div>
+              <div className="AdminMerch">
+                {this.props.product.map((element, index) => {
+                  return (
+                    <Product
+                      product={element}
+                      key={`product: ${index}`}
+                      handleEdit={this.handleEdit}
+                    />
+                  );
+                })}
+              </div>
+            </div>
             <div className="InputBoxTwo">
               <div className="RegisterBoxes">
                 <div className="InputTitleRegister">Register New Admin</div>
@@ -203,21 +229,8 @@ class Admin extends Component {
                 <button onClick={this.handleRegister}>Register</button>
               </div>
             </div>
-            <div className="MerchBoxOne">
-              <div className="InputMerchTitle">Merch </div>
-              <div className="AdminMerch">
-                {this.props.product.map((element, index) => {
-                  return (
-                    <Product
-                      product={element}
-                      key={`product: ${index}`}
-                      handleEdit={this.handleEdit}
-                    />
-                  );
-                })}
-              </div>
-            </div>
           </div>
+          <button className="LogoutButton" onClick={this.handleLogout}>Logout</button>
         </div>
       </div>
     );
@@ -239,4 +252,4 @@ export default connect(
   mapDispatchToProps
 )(Admin);
 
-//add handle edit in product
+

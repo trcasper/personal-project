@@ -23,7 +23,6 @@ class Nav extends React.Component {
     }
   };
 
-
   render() {
     return (
       <div className="Nav">
@@ -59,18 +58,26 @@ class Nav extends React.Component {
         />
         <div className="dropdown" ref={this.dropdown}>
           <br></br>
-          <div className="dropdown-button"><Link to="/merch">Merch</Link></div>
+          <div className="dropdown-button">
+            <Link to="/merch">Merch</Link>
+          </div>
           <br></br>
-          <div className="dropdown-button"><Link to="/contact">Contact</Link></div>
+          <div className="dropdown-button">
+            <Link to="/contact">Contact</Link>
+          </div>
           <br></br>
-          <div className="dropdown-button"><a
-            href="https://www.facebook.com/alpineloopband/app/123966167614127/"
-            target="_blank"
-          >
-            <div className="dropdown-button">Tour</div>
-          </a></div>
+          <div className="dropdown-button">
+            <a
+              href="https://www.facebook.com/alpineloopband/app/123966167614127/"
+              target="_blank"
+            >
+              <div className="dropdown-button">Tour</div>
+            </a>
+          </div>
           <br></br>
-          <div className="dropdown-button"><Link to="/cart">Cart</Link></div>
+          <div className="dropdown-button">
+            <Link to="/cart">Cart</Link>
+          </div>
 
           <br></br>
         </div>

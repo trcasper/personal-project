@@ -76,6 +76,7 @@
   color: rgb(255, 255, 255);
   border: none;
   text-decoration: none; color: white;
+  margin-top: 2vh;
 }
 
 .Continue:hover {

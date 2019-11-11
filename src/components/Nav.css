@@ -1,6 +1,6 @@
 .Nav {
   height: 9vh;
-  /* width: 100%; */
+  width: 100vw;
   background: gray;
   background-image: linear-gradient(
     99deg,
@@ -13,7 +13,9 @@
   justify-content: space-between;
   align-items: center;
   padding-left: 2vh;
-  padding-right: 2vh;
+  padding-right: 4vh;
+  box-sizing: border-box;
+  /* position: fixed; */
 }
 
 .Logo {

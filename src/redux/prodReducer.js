@@ -8,15 +8,21 @@ const GET_PRODUCT = "GET_PRODUCT";
 const ADD_PRODUCT = "ADD_PRODUCT";
 const EDIT_PRODUCT = "EDIT_PRODUCT";
 const GET_PRODUCT_BY_ID = "GET_PRODUCT_BY_ID";
+const GET_CART = "GET_CART";
 
 // export function updateCart(
 //   product_id) {
 //   let data =
 // }
-
+// export function getCart() {
+// let cart = axios.get('/api/cart')
+// .then(res =>  res.data)
+// return {
+//   type: GET_CART, 
+//   payload: cart
+// }
+// }
 export function getProductById(id) {
-  // console.log(product_id, 'bitch')
-  // alert("Added To Cart");
   console.log(id)
   let cart = axios.put(`/api/cart/${id}`).then(res => {
     alert("Added to Cart")
@@ -54,27 +60,27 @@ export function getProduct(
   };
 }
 
-export function addProduct(
-  product_url,
-  product_name,
-  product_description,
-  product_price
-) {
-  let data = axios
-    .post("api/addProduct", {
-      product_url: product_url,
-      product_name: product_name,
-      product_description: product_description,
-      product_price: product_price
-    })
-    .then(res => {
-      return res.data;
-    });
-  return {
-    type: ADD_PRODUCT,
-    payload: data
-  };
-}
+// export function addProduct(
+//   product_url,
+//   product_name,
+//   product_description,
+//   product_price
+// ) {
+//   let data = axios
+//     .post("api/addProduct", {
+//       product_url: product_url,
+//       product_name: product_name,
+//       product_description: product_description,
+//       product_price: product_price
+//     })
+//     .then(res => {
+//       return res.data;
+//     });
+//   return {
+//     type: ADD_PRODUCT,
+//     payload: data
+//   };
+// }
 
 export const editProduct = (
   product_id,
@@ -111,6 +117,9 @@ export default function prodReducer(state = initialState, action) {
       return { ...state, cart: [...cart, payload] };
     // case UPDATE_CART + "_FULFILLED":
     //   return { cart: payload };
+    case GET_CART + "_FULFILLED":
+      console.log(payload, "payload")
+      return {...state, cart: payload}
     default:
       return state;
 
