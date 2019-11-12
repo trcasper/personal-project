@@ -112,12 +112,15 @@ class Admin extends Component {
     Axios.post("/auth/register", {
       username: this.state.username,
       password: this.state.password
+      
     }).then(res => {
       this.setState({
         username: "",
         password: ""
+        
       });
     });
+    alert("User Registered")
   };
 
   handleLogout = () => {
@@ -221,7 +224,8 @@ class Admin extends Component {
                   placeholder="Enter username"
                 />
                 <input
-                  password={this.state.password}
+                  type="password"
+                  value={this.state.password}
                   name="password"
                   onChange={e => this.handleInput(e)}
                   placeholder="Enter password"

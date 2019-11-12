@@ -6,7 +6,7 @@
     99deg,
     rgb(56, 102, 121),
     rgb(114, 158, 187) 40%,
-    rgb(29, 81, 102)
+    rgb(62, 116, 138)
   );
   color: rgb(255, 255, 255);
   display: flex;
@@ -15,6 +15,8 @@
   padding-left: 2vh;
   padding-right: 4vh;
   box-sizing: border-box;
+  box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
+  0 10px 10px 0 rgba(0, 0, 0, 0.26);
   /* position: fixed; */
 }
 
@@ -22,6 +24,8 @@
   height: 70px;
   width: 70px;
   border-radius: 97%;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25),
+  0 1px 1px 0 rgba(0, 0, 0, 0.26);
   /* margin-right: 50%; */
   /* margin-left: 8vh */
 }
@@ -31,22 +35,6 @@
   display: flex;
   justify-content: space-between;
 }
-
-.Button {
-  height: 45px;
-  width: 80px;
-  border-radius: 10%;
-  background-image: linear-gradient(
-    99deg,
-    rgb(166, 203, 219),
-    rgb(114, 158, 187) 40%,
-    rgb(80, 144, 170)
-  );
-  color: rgb(255, 255, 255);
-  border: none;
-  text-decoration: none; color: white;
-}
-
 
 .Button:hover {
   background: rgb(199, 199, 82);

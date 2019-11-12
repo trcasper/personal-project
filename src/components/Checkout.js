@@ -8,6 +8,7 @@ import { getProductById } from "../redux/prodReducer";
 import { Link } from "react-router-dom";
 import "./Checkout.css";
 import Product from '../components/Product'
+import {withRouter} from 'react-router-dom';
 
 
 import "react-toastify/dist/ReactToastify.css";
@@ -80,8 +81,8 @@ const mapStateToProps = reduxState => {
     product, cart
   };
 };
-export default connect(
+export default withRouter (connect(
   mapStateToProps,
   { getProductById }
-)(Checkout);
+)(Checkout));
 

@@ -15,6 +15,7 @@
     justify-content: center;
     text-decoration: underline; color: white;
     margin-bottom: 5vh;
+    text-shadow: 2px 2px rgb(12, 43, 78);
 }
 
 .CheckoutBox {
@@ -23,7 +24,7 @@
     color: rgb(255, 255, 255);
     border-radius: 8px;
     box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
-      0 10px 10px 0 rgba(0, 0, 0, 0.26);
+      0 20px 40px 0 rgba(0, 0, 0, 0.26);
     padding-left: 5vh;
     /* margin-bottom: 5vh; */
     padding-bottom: 5vh;
@@ -36,4 +37,13 @@
     text-decoration: underline; color: white;
     display: flex;
     justify-content: center;
+    text-shadow: 2px 2px rgb(12, 43, 78);
+}
+
+h1 {
+    text-shadow: 2px 2px rgb(12, 43, 78);
+}
+
+h3 {
+    text-shadow: 2px 2px rgb(12, 43, 78);
 }

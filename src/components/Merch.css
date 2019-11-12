@@ -18,6 +18,7 @@
   display: flex;
   justify-content: center;
   text-decoration: underline; color: white;
+  text-shadow: 2px 2px rgb(12, 43, 78);
 }
 
 .ProductContainer {
@@ -27,7 +28,7 @@
     color: rgb(255, 255, 255);
     border-radius: 8px;
     box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
-      0 10px 10px 0 rgba(0, 0, 0, 0.26);
+      0 20px 40px 0 rgba(0, 0, 0, 0.26);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,7 +83,10 @@
   color: rgb(255, 255, 255);
   border: none;
   text-decoration: none; color: white;
+  box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
+  0 5px 5px 0 rgba(0, 0, 0, 0.26);
   margin-top: 2vh;
+  /* text-shadow: 2px 2px rgb(12, 43, 78); */
 }
 
 .Continue:hover {
@@ -97,6 +101,24 @@
   border-radius: 10%;
   background-image: linear-gradient(
     99deg,
+    rgb(55, 93, 109),
+    rgb(58, 102, 131) 40%,
+    rgb(73, 118, 136)
+  );
+  color: rgb(255, 255, 255);
+  border: none;
+  text-decoration: none; color: white;
+  box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
+  0 5px 5px 0 rgba(0, 0, 0, 0.26);
+  text-shadow: 1px 1px rgb(12, 43, 78);
+}
+
+.AddButton {
+  height: 45px;
+  width: 80px;
+  border-radius: 10%;
+  background-image: linear-gradient(
+    99deg,
     rgb(166, 203, 219),
     rgb(114, 158, 187) 40%,
     rgb(80, 144, 170)
@@ -104,6 +126,10 @@
   color: rgb(255, 255, 255);
   border: none;
   text-decoration: none; color: white;
+  box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
+  0 5px 5px 0 rgba(0, 0, 0, 0.26);
+  margin-left: 1vh;
+  /* text-shadow: 2px 2px rgb(12, 43, 78); */
 }
 
 @media (max-width: 800px) {
