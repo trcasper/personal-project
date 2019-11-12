@@ -9,6 +9,7 @@ const ADD_PRODUCT = "ADD_PRODUCT";
 const EDIT_PRODUCT = "EDIT_PRODUCT";
 const GET_PRODUCT_BY_ID = "GET_PRODUCT_BY_ID";
 const GET_CART = "GET_CART";
+const CLEAR_CART = "CLEAR_CART";
 
 // export function updateCart(
 //   product_id) {
@@ -32,6 +33,17 @@ export function getProductById(id) {
   console.log(cart)
   return {
     type: GET_PRODUCT_BY_ID,
+    payload: cart
+  }
+}
+
+export function clearCart () {
+  let cart = axios.put('/api/clearCart').then(res => {
+    return res.data
+  });
+  console.log(cart)
+  return {
+    type: CLEAR_CART,
     payload: cart
   }
 }
@@ -122,6 +134,8 @@ export default function prodReducer(state = initialState, action) {
       return {...state, cart: payload}
     default:
       return state;
+    case CLEAR_CART + "_FULFILLED":
+      return {...state, cart: payload}
 
     // case ADD_TO_CART + "_FULFILLED":
     //   return product.getElementById(id)

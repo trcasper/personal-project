@@ -9,13 +9,28 @@ import { Link } from "react-router-dom";
 import "./Checkout.css";
 import Product from '../components/Product'
 
+
 import "react-toastify/dist/ReactToastify.css";
 // import "./styles.css";
 
 toast.configure();
 
+
+
 function Checkout(props) {
-  const [product] = React.useState(props.product);
+  const [product] = React.useState(props.cart);
+  const [cartTotal, setCartTotal] = React.useState(0)
+
+  React.useEffect(() => {
+    console.log(props.cart)
+    let cartSum = props.cart.reduce((acc, element, index) => {
+      console.log('e', element)
+      return acc + element.product_price
+    }, 0) 
+    console.log(cartSum)
+    setCartTotal(cartSum)
+  }, [] )
+
   
   async function handleToken(token, addresses) {
     const response = await axios.post("https://0w32e.sse.codesandbox.io/", {
@@ -30,21 +45,31 @@ function Checkout(props) {
       toast("Something went wrong", { type: "error" });
     }
   }
-
+  console.log(props.cart)
+  console.log(cartTotal)
   return (
     <div className="CheckoutPage">
-      <div className="product">
-        <h1>{product.name}</h1>
-        <h3>On Sale · ${product.price}</h3>
-      </div>
+      <div className="CheckoutTitle">Checkout</div>
+      <div className="CheckoutBox">
+        <div className="OrdersTitle">Your Orders</div>
+        {/* <h1>{props.cart[0].product_name}</h1> */}
+        {props.cart.map((element, index) => {
+          return (<h1>{`Product - ${element.product_name}`}</h1>)
+        }
+        )}
+
+        <h3>{`Total Cost - $ ${cartTotal}`}</h3>
+      
+        
       <StripeCheckout
         stripeKey="pk_test_TA9gu68Qei0D3nUkGGAcuWLl00EWVyCe6k"
         token={handleToken}
-        amount={product.price * 100}
-        name="Tesla Roadster"
+        amount={cartTotal * 100}
+        name="Your Order"
         billingAddress
         shippingAddress
       />
+    </div>
     </div>
   );
 }
@@ -52,7 +77,7 @@ function Checkout(props) {
 const mapStateToProps = reduxState => {
   const { product, cart } = reduxState.prodReducer;
   return {
-    product
+    product, cart
   };
 };
 export default connect(
@@ -60,15 +85,3 @@ export default connect(
   { getProductById }
 )(Checkout);
 
-//   const handleLogout = () => {
-//       axios
-//           .post('/auth/logout')
-//           .then(res => {
-//               props.history.push('/');
-//           })
-//           .catch(err => console.log(err));
-//   }
-//   console.log(props)
-
-/* <h3>{this.props.user.username}</h3> */
-/* <button onClick={handleLogout}>LogOut</button> */

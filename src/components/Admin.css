@@ -49,7 +49,7 @@
 
   .InputBoxOne {
     height: 95%;
-    width: 45vh;
+    width: 50vh;
     border: solid;
     display: flex;
     flex-direction: column;
@@ -73,7 +73,7 @@
 
   .InputBoxTwo {
     height: 95%;
-    width: 45vh;
+    width: 50vh;
     border: solid;
     display: flex;
     flex-direction: column;
@@ -100,7 +100,7 @@
 
 .MerchBoxOne {
   height: 250%;
-  width: 45vh;
+  width: 50vh;
   border: solid;
   display: flex;
   flex-direction: column;

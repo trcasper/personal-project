@@ -79,6 +79,11 @@ module.exports = {
         
 },
 
+  clearCart: (req, res) => {
+    req.session.cart = [];
+    res.status(200).send(req.session.cart)
+  }
+
 //   DeleteFromCart: (req, res) => {
 //   res.send(req.session.cart.splice(index, 1))
 //   res.status(200).send

@@ -59,6 +59,7 @@
     height: 90%;
     width: auto;
     border: solid rgb(28, 85, 107);
+    margin-bottom: 8vh;
 }
 
 @media(max-width: 800px) {
