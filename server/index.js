@@ -11,11 +11,9 @@ app.use(express.json())
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env
 
 //server connect
-const path = require('path');
 
-app.get('*', (req, res)=>{
-    res.sendFile(path.join(__dirname, '../build/index.html'));
-});
+app.use( express.static( `${__dirname}/../build` ) );
+
 //
 
 massive(CONNECTION_STRING).then(db => {
