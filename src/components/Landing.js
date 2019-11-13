@@ -23,7 +23,7 @@ function Landing() {
         </div>
       </div>
       
-      <Link to="/merch">
+      <Link to="/merch" className="EntireMerchLink">
         <div className="BoxThree">
           <div className="MerchTitle">Merch</div>
           <div className="NewAlbum">

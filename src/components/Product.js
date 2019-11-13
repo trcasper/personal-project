@@ -34,9 +34,9 @@ class Product extends Component {
           <div className="ProductPic"><img src={this.props.product.product_url} /></div>
             
           <div className="DescriptionBox">
-            <p>{this.props.product.product_name}</p>
-            <p>{this.props.product.product_description}</p>
-            <p>${this.props.product.product_price}</p>
+            <div className="ProductName">{this.props.product.product_name}</div>
+            <div className="ProductDescription">{this.props.product.product_description}</div>
+            <div className="ProductPrice">${this.props.product.product_price}</div>
 
             {/* <p>{this.props.product.user_id}</p> */}
               

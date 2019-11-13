@@ -1,111 +1,106 @@
 .Admin {
-    height: 200vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .AdminTitle {
-    height: 10vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-size: 65px;
-    font-family: "Permanent Marker", cursive;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    text-decoration: underline; color: white;
-  }
-  
-  .AdminContainer {
-      height: 75%;
-      width: 80%;
-      /* border: solid rgb(114, 158, 187); */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-  }
-
-  .InputContainer {
-      height: 90%;
-      width: 60%;
-      display: flex;
-      flex-direction: column;
-      /* justify-content: space-around; */
-      /* justify-content: center; */
-      padding: 20px;
-      box-sizing: border-box;
-      align-items: center;
-      background-image: linear-gradient(
-        99deg,
-        rgb(56, 102, 121),
-        rgb(114, 158, 187) 40%,
-        rgb(62, 116, 138)
-      );
-      color: rgb(255, 255, 255);
-      border-radius: 8px;
-      box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
-        0 10px 10px 0 rgba(0, 0, 0, 0.26);
-      
-  }
-
-  .InputBoxOne {
-    height: 95%;
-    width: 50vh;
-    border: solid;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-  }
-
-  .InputTitleProduct {
-    display: flex;
-    font-family: "Permanent Marker", cursive;
-    justify-content: center;
-  }
-
-  .InputBoxes {
-      height: 95%;
-      width: 80%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-  }
-
-  .InputBoxTwo {
-    height: 95%;
-    width: 50vh;
-    border: solid;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  height: 200vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-  .RegisterBoxes {
-    height: 95%;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+.AdminTitle {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 65px;
+  font-family: "Permanent Marker", cursive;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  color: white;
 }
 
+.AdminContainer {
+  height: 95%;
+  /* width: 120vh; */
+  /* border: solid rgb(114, 158, 187); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
 
+.InputContainer {
+  height: 90%;
+  width: 65vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  /* justify-content: center; */
+  padding: 20px;
+  box-sizing: border-box;
+  align-items: center;
+  background-image: linear-gradient(
+    99deg,
+    rgb(56, 102, 121),
+    rgb(114, 158, 187) 40%,
+    rgb(62, 116, 138)
+  );
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
+    0 10px 10px 0 rgba(0, 0, 0, 0.26);
+}
+
+.InputBoxOne {
+  height: 95%;
+  width: 52vh;
+  border: solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.InputTitleProduct {
+  display: flex;
+  font-family: "Permanent Marker", cursive;
+  justify-content: center;
+}
+
+.InputBoxes {
+  height: 95%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.InputBoxTwo {
+  height: 95%;
+  width: 52vh;
+  border: solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.RegisterBoxes {
+  height: 95%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
 
 .InputTitleRegister {
   display: flex;
   font-family: "Permanent Marker", cursive;
   justify-content: center;
-
-  
 }
 
 .MerchBoxOne {
   height: 300%;
-  width: 50vh;
+  width: 52vh;
   border: solid;
   display: flex;
   flex-direction: column;
@@ -123,8 +118,38 @@
 
 .AdminMerch {
   height: 95%;
-  width: 95%;
+  /* width: 95%; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.LogoutButton {
+  height: 45px;
+  width: 120px;
+  border-radius: 10%;
+  background-image: linear-gradient(
+    99deg,
+    rgb(158, 30, 26),
+    rgb(161, 78, 76) 40%,
+    rgb(129, 61, 61)
+  );
+  color: rgb(255, 255, 255);
+  border: none;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25), 0 5px 5px 0 rgba(0, 0, 0, 0.26);
+  margin-bottom: 8vh;
+}
+
+.LogoutButton:hover {
+  background: rgb(199, 199, 82);
+  color: black;
+  transition: 0.3s;
+}
+
+@media (max-width: 800px) {
+  .InputContainer {
+    width: 53vh;
+  }
 }

@@ -16,7 +16,7 @@
 
 .LoginContainer {
   height: 55vh;
-  width: 35vw;
+  width: 45vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

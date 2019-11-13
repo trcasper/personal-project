@@ -20,7 +20,6 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
-
 }
 
 .PicBox {
@@ -38,12 +37,9 @@
   display: flex;
   justify-content: flex-end;
   box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
-  0 10px 10px 0 rgba(0, 0, 0, 0.26);
+    0 10px 10px 0 rgba(0, 0, 0, 0.26);
   /* border: solid rgb(25, 95, 121); */
-
 }
-
-
 
 .BoxTwo {
   height: 60vh;
@@ -62,43 +58,53 @@
     0 10px 10px 0 rgba(0, 0, 0, 0.26);
 }
 
+iframe {
+  border-radius: 10px;
+}
 .BoxThree {
-    height: 80vh;
-    width: 100%;
-    display: flex;
-    /* justify-content: center; */
-    flex-direction: column;
-    align-items: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+}
+
+.EntireMerchLink {
+  display: flex;
+
+  justify-content: center;
 }
 
 .MerchTitle {
-    height: 10vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-size: 65px;
-    font-family: "Permanent Marker", cursive;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    text-decoration: underline; color: white;
-    text-shadow: 2px 2px rgb(12, 43, 78);
-    
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 65px;
+  font-family: "Permanent Marker", cursive;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  color: white;
+  text-shadow: 2px 2px rgb(12, 43, 78);
 }
 
 .NewAlbum {
-    height: 8vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-size: 35px;
-    font-family: "Permanent Marker", cursive;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    text-decoration: underline; color: white;
-    text-align: center;
-    text-shadow: 2px 2px rgb(12, 43, 78);
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  font-family: "Permanent Marker", cursive;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px rgb(12, 43, 78);
 }
 
 .MerchBox {
@@ -108,7 +114,6 @@
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  
 }
 
 .Poster {
@@ -121,8 +126,7 @@
   border: solid rgb(25, 95, 121);
   flex-direction: column;
   box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
-  0 10px 10px 0 rgba(0, 0, 0, 0.26);
-
+    0 10px 10px 0 rgba(0, 0, 0, 0.26);
 }
 
 .Shirt {
@@ -134,7 +138,7 @@
   background-color: white;
   border: solid rgb(25, 95, 121);
   box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
-  0 10px 10px 0 rgba(0, 0, 0, 0.26);
+    0 10px 10px 0 rgba(0, 0, 0, 0.26);
 }
 
 .Pizza {
@@ -146,8 +150,7 @@
   background-color: white;
   border: solid rgb(25, 95, 121);
   box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
-  0 10px 10px 0 rgba(0, 0, 0, 0.26);
-
+    0 10px 10px 0 rgba(0, 0, 0, 0.26);
 }
 
 .LoopLogo {
@@ -158,7 +161,6 @@
 .LoopShirt {
   height: 70%;
   width: auto;
-
 }
 
 .MerchLabels {
@@ -181,7 +183,8 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  text-decoration: underline; color: white;
+  text-decoration: underline;
+  color: white;
   text-shadow: 2px 2px rgb(12, 43, 78);
 }
 
@@ -196,7 +199,8 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  text-decoration: underline; color: white;
+  text-decoration: underline;
+  color: white;
 }
 
 .PizzaLabel {
@@ -210,7 +214,8 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  text-decoration: underline; color: white;
+  text-decoration: underline;
+  color: white;
 }
 
 .ClickHere {
@@ -218,10 +223,10 @@
   font-family: "Permanent Marker", cursive;
 }
 
-
 .AdminButton {
   height: 45px;
   width: 80px;
+
   border-radius: 10%;
   background-image: linear-gradient(
     99deg,
@@ -231,23 +236,20 @@
   );
   color: rgb(255, 255, 255);
   border: none;
-  text-decoration: none; color: white;
-  box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
-  0 5px 5px 0 rgba(0, 0, 0, 0.26);
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25), 0 5px 5px 0 rgba(0, 0, 0, 0.26);
   margin-bottom: 8vh;
   /* text-shadow: 2px 2px rgb(12, 43, 78); */
-  
-  
 }
 
-
-@media(min-width: 800px) {
+@media (min-width: 800px) {
   .ClickHere {
     display: none;
   }
 }
 
-@media(max-width: 800px) {
+@media (max-width: 800px) {
   .Title {
     font-size: 40px;
   }
@@ -277,6 +279,8 @@
   .MerchLabels {
     display: none;
   }
-
+  .AdminButton {
+    height: 25px;
+    width: 55px;
+  }
 }
-

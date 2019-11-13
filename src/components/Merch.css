@@ -23,7 +23,7 @@
 
 .ProductContainer {
     height: 75%;
-    width: 50%;
+    width: 70%;
     background-image: linear-gradient(99deg, rgb(28, 85, 107), rgb(72, 108, 131) 40%, rgb(29, 81, 102));
     color: rgb(255, 255, 255);
     border-radius: 8px;
@@ -38,12 +38,12 @@
 }
 
 .ProductBox {
-  height: 25%;
-  width: 90%;
+  height: 20vh;
+  width: 58vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-bottom: 2vh; */
+  
 }
 
 .ProductPic {
@@ -55,6 +55,8 @@
 .ProductPic img {
   width: 100%;
   height: 100%;
+  box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
+      0 20px 40px 0 rgba(0, 0, 0, 0.26);
 
 }
 
@@ -63,11 +65,26 @@
   width: 50%;
   border: solid;
   font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   padding-left: 3%;
+  box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
+      0 20px 40px 0 rgba(0, 0, 0, 0.26);
 }
 
-.ProdTitle {
-  font-size: 15px;
+.ProductName {
+  font-size: 25px;
+  text-shadow: 2px 2px rgb(12, 43, 78);
+  
+}
+
+.ProductDescription {
+  text-shadow: 2px 2px rgb(12, 43, 78);
+}
+
+.ProductPrice {
+  text-shadow: 2px 2px rgb(12, 43, 78);
 }
 
 .Continue {
@@ -136,6 +153,21 @@
   .ProductContainer {
     width: 80%;
   }
+  .ProductBox {
+    width: 40vh;
+    height: 15vh;
+  }
+  .AddButton {
+    height: 22px;
+    width: 40px;
+  }
+  .ProductName {
+    font-size: 18px;
+  }
+  .ProductDescription {
+    font-size: 14px;
+  }
+
 }
 
 
