@@ -12,6 +12,11 @@ function Landing() {
   return (
     <div className="Landing">
       <div className="Title">ALPINE LOOP</div>
+      {/* <div className="InsertVid">
+          <iframe className="FbVid" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Falpineloopband%2Fvideos%2F273401040041964%2F&show_text=0&width=476"> */}
+      {/* <div className="OverlayTitle">ALPINE LOOP</div> */}
+      {/* </iframe> */}
+      {/* </div> */}
       <div className="BoxOne">
         <div className="PicBox">
           <img className="BandPic" src={Band} alt="FullBandPic" />
@@ -22,10 +27,9 @@ function Landing() {
           <ReactPlayer url="https://youtu.be/A4LXZJ54OnE" />
         </div>
       </div>
-      
       <Link to="/merch" className="EntireMerchLink">
         <div className="BoxThree">
-          <div className="MerchTitle">Merch</div>
+          <div className="MerchBoxTitle">Merch</div>
           <div className="NewAlbum">
             Full-Length Album / New Merch Coming Soon!
           </div>
@@ -45,13 +49,13 @@ function Landing() {
             <div className="PosterLabel">Posters!</div>
             <div className="ShirtLabel">Shirts!</div>
             <div className="PizzaLabel">Pizzas!</div>
-            
           </div>
-          <div className="ClickHere">Click Here!</div>
+          {/* <div className="ClickHere">Click Here!</div> */}
         </div>
       </Link>
-      <Link to="/login"><button className="AdminButton">Admin</button></Link>
-
+      <Link to="/login">
+        <button className="AdminButton">Admin</button>
+      </Link>
     </div>
   );
 }

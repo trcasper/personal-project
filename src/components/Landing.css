@@ -41,6 +41,30 @@
   /* border: solid rgb(25, 95, 121); */
 }
 
+.InsertVid {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FbVid {
+  width: 35vh;
+  height: 90%;
+  position: relative;
+  background-size: cover;
+  box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25),
+    0 10px 10px 0 rgba(0, 0, 0, 0.26);
+  border: none;
+}
+
+.OverlayTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate();
+}
+
 .BoxTwo {
   height: 60vh;
   width: 100%;
@@ -65,7 +89,7 @@ iframe {
   height: 100%;
   width: 100%;
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   flex-direction: column;
   align-items: center;
 }
@@ -76,7 +100,7 @@ iframe {
   justify-content: center;
 }
 
-.MerchTitle {
+.MerchBoxTitle {
   height: 10vh;
   width: 100%;
   display: flex;
@@ -218,14 +242,15 @@ iframe {
   color: white;
 }
 
-.ClickHere {
+/* .ClickHere {
   font-size: 40px;
   font-family: "Permanent Marker", cursive;
-}
+} */
 
 .AdminButton {
   height: 45px;
   width: 80px;
+  margin-left: 1vh;
 
   border-radius: 10%;
   background-image: linear-gradient(
@@ -243,11 +268,11 @@ iframe {
   /* text-shadow: 2px 2px rgb(12, 43, 78); */
 }
 
-@media (min-width: 800px) {
+/* @media (min-width: 800px) {
   .ClickHere {
     display: none;
   }
-}
+} */
 
 @media (max-width: 800px) {
   .Title {
@@ -263,9 +288,8 @@ iframe {
   .VidBox {
     width: 85%;
   }
-  .MerchTitle {
+  .MerchBoxTitle {
     font-size: 40px;
-    color: orange;
   }
   .NewAlbum {
     font-size: 20px;
@@ -274,13 +298,37 @@ iframe {
     width: 85%;
   }
   .MerchBox {
-    display: none;
+    /* display: none; */
+    width: 40vh;
+    height: 20vh;
+    margin-top: 5vh;
   }
   .MerchLabels {
-    display: none;
+    /* display: none; */
   }
   .AdminButton {
     height: 25px;
     width: 55px;
+  }
+  .Poster {
+    height: 20vh;
+  }
+  .Shirt {
+    height: 20vh;
+  }
+  .Pizza {
+    height: 20vh;
+  }
+  .PizzaPic {
+    height: 75%;
+  }
+  .PosterLabel {
+    font-size: 17px;
+  }
+  .ShirtLabel {
+    font-size: 17px;
+  }
+  .PizzaLabel {
+    font-size: 17px;
   }
 }
