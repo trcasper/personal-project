@@ -23,3 +23,8 @@ CREATE TABLE products (
     INSERT INTO products (product_url, product_name, product_description, product_price)
     VALUES ('test_url', 'test_shirt', 'test_this shirt is blue', '5');
 
+
+
+    select * from products join users on products.user_id = users.user_id
+
+
